@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1181</width>
+    <height>688</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_5">
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>5</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="opaqueResize">
+       <bool>true</bool>
+      </property>
+      <property name="handleWidth">
+       <number>4</number>
+      </property>
+      <property name="childrenCollapsible">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="wToolbox" native="true">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+        <item>
+         <widget class="QListView" name="uiToolList">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="dragEnabled">
+           <bool>true</bool>
+          </property>
+          <property name="dragDropMode">
+           <enum>QAbstractItemView::DragOnly</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>324</width>
+            <height>2</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="wQueue" native="true">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QPushButton" name="bQueueRemoveItem">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Remove Selected Item</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="bClearAll">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Clear Queue</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTreeView" name="treeView">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::DoubleClicked</set>
+          </property>
+          <property name="dragEnabled">
+           <bool>true</bool>
+          </property>
+          <property name="dragDropMode">
+           <enum>QAbstractItemView::DragDrop</enum>
+          </property>
+          <property name="defaultDropAction">
+           <enum>Qt::MoveAction</enum>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="rootIsDecorated">
+           <bool>true</bool>
+          </property>
+          <property name="uniformRowHeights">
+           <bool>false</bool>
+          </property>
+          <property name="sortingEnabled">
+           <bool>false</bool>
+          </property>
+          <attribute name="headerVisible">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="headerCascadingSectionResizes">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="headerStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+         </widget>
+        </item>
+        <item>
+         <widget class="QProgressBar" name="queueProgress">
+          <property name="value">
+           <number>0</number>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="format">
+           <string>%p%</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QPushButton" name="bExecute">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Start</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="text">
+             <string>Stop</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QTabWidget" name="uiTabs">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="currentIndex">
+           <number>-1</number>
+          </property>
+          <property name="tabsClosable">
+           <bool>true</bool>
+          </property>
+          <property name="movable">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QListView" name="listView">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="showDropIndicator" stdset="0">
+           <bool>false</bool>
+          </property>
+          <property name="dragEnabled">
+           <bool>false</bool>
+          </property>
+          <property name="dragDropOverwriteMode">
+           <bool>false</bool>
+          </property>
+          <property name="dragDropMode">
+           <enum>QAbstractItemView::NoDragDrop</enum>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1181</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>Fi&amp;le</string>
+    </property>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionLogging_Monitor"/>
+   </widget>
+   <widget class="QMenu" name="menuWindow">
+    <property name="title">
+     <string>Wi&amp;ndow</string>
+    </property>
+    <widget class="QMenu" name="menuView">
+     <property name="title">
+      <string>&amp;View</string>
+     </property>
+     <addaction name="actionToolbox"/>
+     <addaction name="actionQueue"/>
+    </widget>
+    <addaction name="menuView"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuWindow"/>
+  </widget>
+  <widget class="QStatusBar" name="uiStatus"/>
+  <action name="actionQuit">
+   <property name="text">
+    <string>&amp;Exit</string>
+   </property>
+  </action>
+  <action name="actionLogging_Monitor">
+   <property name="text">
+    <string>&amp;Logging Monitor</string>
+   </property>
+  </action>
+  <action name="actionToolbox">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Toolbox</string>
+   </property>
+  </action>
+  <action name="actionQueue">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Queue</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionQueue</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>wQueue</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>555</x>
+     <y>342</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionToolbox</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>wToolbox</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>194</x>
+     <y>342</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

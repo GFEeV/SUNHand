@@ -1,0 +1,55 @@
+<!-- Example Serial Device                                 -->
+<!-- Device Type="Serial"                                  -->
+<!--        [Port=<str>]                                   -->
+<!--        [Baudrate=<int>]                               -->
+<!--        [FlowControl=(None|Hardware|Software|Unknown)] -->
+<!--        [Parity=(None|Even|Odd|Mark|Space)]            -->
+<!--        [StopBits=(1|1.5|2)]                           -->
+<!--        [DataBits=(5|6|7|8)]                           -->
+<!--        [Terminate=<regex>]                            -->
+<!--        [Advance=True]                                 -->
+
+<Device Type="Serial"
+        BaudRate="4800" 
+        ByteSize="8" 
+        StopBit="1"
+        Parity="None"
+        Port="ttyUSB0"
+        FlowControl="Software"
+        Advanced="True"
+        Terminate="\r">
+  <Command Name="Spannungsmessung [V]" Data="VO"/>
+  <Command Name="Strommessung [A]" Data="AM"/>
+  <Command Name="Strommessung [mA]" Data="MA"/>
+  <Command Name="Widerstandsmessung" Data="OH"/>
+  <Command Name="Diodentest" Data="DI"/>
+  <Command Name="Temperaturmessung C" Data="TC"/>
+  <Command Name="Temperaturmessung F" Data="TF"/>
+  <Command Name="dB-Messung" Data="DB"/>
+
+  <Command Name="DC Modus" Data="DC"/>
+  <Command Name="AC Modus" Data="AC"/>
+  <Command Name="AC + DC Modus" Data="AD"/>
+  <Command Name="Beep an" Data="BY"/>
+  <Command Name="Beep aus" Data="BN"/>
+
+  <Command Name="Automatic Range" Data="AY"/>
+  <Command Name="manual Range" Data="AN"/>
+  <Command Name="next Range" Data="R+"/>
+  <Command Name="previous Range" Data="R-"/>
+
+  <Command Name="Hold Modus" Data="HD"/>
+  <Command Name="Offset Modus" Data="O1"/>
+  <Command Name="Normaler Modus" Data="O0"/>
+  <Command Name="Tasten-Sperre aktiviert" Data="L0"/>
+  <Command Name="Tasten-Sperre deaktiviert" Data="L1"/>
+
+  <Command Name="Geraete-Information" Data="I?"/>
+  <Command Name="Messfunktion" Data="F?"/>
+  <Command Name="Betriebsart" Data="M?"/>
+  <Command Name="Display-Option" Data="D?"/>
+  <Command Name="Messbereich" Data="R?"/>
+  <Command Name="Instrumenteneinstellungen" Data="P?"/>
+  <Command Name="Abfrage aktueller Messwert" Data="S?"/>
+  <Command Name="Abfrage Fehlerindikator" Data="E?"/>
+</Device>

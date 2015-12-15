@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Filter Name="TestFilter3" Linebreak="False" Active="False" Overwrite="False" Format="{sender} {receiver} {message}" Output="" Header="">
+    <Trigger Target="" Pattern="X"/>
+</Filter>

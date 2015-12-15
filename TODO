@@ -1,0 +1,23 @@
+Queue:
+  Start-Stop Button
+  deep-item-count (loops)
+  start-date
+  green, yellow, white for already preocessed, in progress and to be processed
+
+XML:
+  XSD
+
+Device:
+  auto import
+
+Logging Monitor:
+  filter preview
+  move logs to static directory
+
+general:
+  refactoring
+  documentation
+
+digiface:
+  reset button
+  Start/Stop Reperatur !

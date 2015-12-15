@@ -1,0 +1,10 @@
+<!-- Example Serial Device          -->
+<!-- Device Type="MetaWatch"        -->
+<!--        [Address=<MAC-Address>] -->
+<!-- MetaWatch http://meta.watch/   -->
+
+<Device Address="D0:37:61:C2:DB:CF"
+        Type="MetaWatch">
+  <Command Name="Buzz"
+           Data="010c230001f401f4010181b1"/>
+</Device>

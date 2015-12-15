@@ -1,0 +1,22 @@
+<!-- Example Serial Device                                 -->
+<!-- Device Type="Serial"                                  -->
+<!--        [Port=<str>]                                   -->
+<!--        [Baudrate=<int>]                               -->
+<!--        [FlowControl=(None|Hardware|Software|Unknown)] -->
+<!--        [Parity=(None|Even|Odd|Mark|Space)]            -->
+<!--        [StopBits=(1|1.5|2)]                           -->
+<!--        [DataBits=(5|6|7|8)]                           -->
+<!--        [Terminate=<regex>]                            -->
+<!--        [Advance=True]                                 -->
+
+<Device Type="Serial"
+  Port="/dev/ttyUSB*"
+  BaudRate="115200">
+  <Command Name="Baud Rate" Data="B">
+    <Parameter Name="Baud Rate" Type="int" Default="115300"/>
+  </Command>
+  <Command Name="Node ID" Data="N" Structure="C,P1,P2,P1">
+    <Parameter Name="ID" Type="int" Default="0"/>
+    <Parameter Name="Text" Type="str"/>
+  </Command>
+</Device>

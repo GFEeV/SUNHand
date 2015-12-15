@@ -1,0 +1,30 @@
+<!-- Example Serial Device                                 -->
+<!-- Device Type="Serial"                                  -->
+<!--        [Port=<str>]                                   -->
+<!--        [Baudrate=<int>]                               -->
+<!--        [FlowControl=(None|Hardware|Software|Unknown)] -->
+<!--        [Parity=(None|Even|Odd|Mark|Space)]            -->
+<!--        [StopBits=(1|1.5|2)]                           -->
+<!--        [DataBits=(5|6|7|8)]                           -->
+<!--        [Terminate=<regex>]                            -->
+<!--        [Advance=True]                                 -->
+
+<Device Type="Serial"
+        BaudRate="38400"
+        ByteSize="8"
+        Terminate="\r\n">
+  <Command Name="M0 Command" Data="M0"/>
+  <Command Name="MS Command" Data="MS"/>
+  <Command Name="Get Sensor Data" Data="SR" Structure="C,P1,P2">
+    <Parameter Name="ID Number" Type="str" Default="00"/>
+    <Parameter Name="Data Number" Type="str" Default="037"/>
+  </Command>
+  <Command Name="Set Sensor Data" Data="SW" Structure="C,P1,P2,P3">
+    <Parameter Name="ID Number" Type="str" Default="00"/>
+    <Parameter Name="Data Number" Type="str" Default="000"/>
+    <Parameter Name="Setting data" Type="str"/>
+  </Command>
+  <Command Name="Reset" Data="SW,00,005,0\r\nSW,00,005,1"/>
+</Device>
+
+

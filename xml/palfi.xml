@@ -1,0 +1,21 @@
+<!-- Example Serial Device                                 -->
+<!-- Device Type="Serial"                                  -->
+<!--        [Port=<str>]                                   -->
+<!--        [Baudrate=<int>]                               -->
+<!--        [FlowControl=(None|Hardware|Software|Unknown)] -->
+<!--        [Parity=(None|Even|Odd|Mark|Space)]            -->
+<!--        [StopBits=(1|1.5|2)]                           -->
+<!--        [DataBits=(5|6|7|8)]                           -->
+<!--        [Terminate=<regex>]                            -->
+<!--        [Advance=True]                                 -->
+<!-- PaLFI http://www.ti.com/product/tms37157              -->
+
+<Device Type="Serial"
+        Port="ttyUSB1"
+        BaudRate="9600"
+        ByteSize="8-Bits">
+  <Command Name="hole UID" Data="01060610080c000a1e"/>
+  <Command Name="MSP ACCESS" Data="010e0610487d020100000000114b320a4c"/>
+  <Command Name="Batterie Status" Data="01060610084c000a5e"/>
+  <Command Name="Lade Batterie" Data="01078610100868000aeb"/>
+</Device>

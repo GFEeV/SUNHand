@@ -1,0 +1,8 @@
+<!-- Example Bluetooth Device          -->
+<!-- Device Type="Bluetooth" [Address] -->
+
+<Device Address="D0:37:61:C2:DB:CF"
+        Type="Bluetooth">
+  <Command Name="Buzz"
+           Data="010c230001f401f4010181b1"/>
+</Device>

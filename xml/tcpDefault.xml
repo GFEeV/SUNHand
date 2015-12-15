@@ -1,0 +1,11 @@
+<!-- Example TCP Device   -->
+<!-- Device Type="TCP"    -->
+<!--        [Server=<IP>] -->
+<!--        [Port=<Port>] -->
+
+<Device Type="TCP"
+        Server="127.0.0.1"
+        Port="3366">
+  <Command Name="light on" Data="light on"/>
+  <Command Name="light off" Data="light off"/>
+</Device>
