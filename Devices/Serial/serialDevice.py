@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 from PyQt5 import QtGui, QtSerialPort
-from Abstracts import abstractDevice
 from Classes.commandClass import Command
 from Classes.deviceClass import Device
 from Devices.Serial.serialWidget import SerialWidget
@@ -44,11 +43,6 @@ class SerialDevice(Device):
       self.advanced = True
     else:
       self.advanced = False
-
-
-  def getName(self):
-    return self.name
-
 
   def getWidget(self, postman):
     return SerialWidget(self, postman)

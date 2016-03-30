@@ -78,7 +78,7 @@ class Item(object):
            QtCore.Qt.ItemIsEditable
 
 
-  def execute(self, postman, phelper):
+  def execute(self, postman, pHelper):
     for child in self.children:
       child.execute(postman, pHelper)
       pHelper.process()
