@@ -13,7 +13,5 @@ SUNHand unterstützt zurzeit 3 verschiedene grundlegende Device Typen:
   - TCP
 
 und einen erweiterten Typen:
-  - MetaWatch (auf Bluetooth aufbauend)
-
-und ein zusätzliches MetaWatch (http://meta.watch) Device.
+  - [MetaWatch](http://meta.watch)
 
